@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Rails App
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = favicon_link_tag       '/shortcut-icon.png', type: 'image/png'
+    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag    '/pui/components.css', media: 'all'
+    = stylesheet_link_tag    '/font-mfizz-2.3.0/font-mfizz.css', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application'
+    = javascript_include_tag '/pui/bootstrap.js'
+    = csrf_meta_tags
+  %body.bg-neutral-9{ class: "#{controller_name} #{action_name}"}
+    .main.container-fluid.pan
+      %section.header
+        = render partial: 'partials/header'
+      %section.content
+        = render partial: 'partials/breadcrumb'
+        = yield
+      %section
+        = render partial: 'partials/footer'

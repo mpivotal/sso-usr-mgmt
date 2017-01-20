@@ -1,0 +1,35 @@
+.header .logo, .header .product {
+  vertical-align: middle;
+  display: inline-block;
+}
+.header .logo {
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+}
+.user_search {
+  border: 1px solid #d4d9d9;
+  border-radius: 5px;
+  input {
+    min-width: 340px;
+  }
+}
+.input-left-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 20px;
+  fill: #686868;
+}
+.svgicon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+    position: relative;
+    height: 1em;
+    width: 1em;
+}

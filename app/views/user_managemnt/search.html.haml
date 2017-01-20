@@ -1,0 +1,20 @@
+.bg-neutral-11.manage-users-page
+  .container
+    .row
+      - if action_name == 'invite_confirm'
+        .alert.mtl{ :class => "alert-success" }
+          An invite has been sent to email@example.com
+      .panel.bg-neutral-clearfix.pbn
+        .panel-body.pbn
+          / react-text: 39
+          / /react-text
+          %h2.index-title
+            %span Internal Users
+            = render partial: 'partials/invite_button'
+      .panel.bg-neutral-clearfix
+        .panel-body
+          .user_search.mbxl
+            .paxl
+              = render partial: 'partials/user_search'
+
+= render partial: 'partials/invite_modal'

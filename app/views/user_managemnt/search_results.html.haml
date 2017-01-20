@@ -1,0 +1,48 @@
+.bg-neutral-11.manage-users-page
+  .container
+    .row
+      .panel.bg-neutral-clearfix.pbn
+        .panel-body.pbn
+          / react-text: 39
+          / /react-text
+          %h2.index-title
+            %span Internal Users
+            = render partial: 'partials/invite_button'
+      .panel.bg-neutral-clearfix
+        .panel-body
+          .user_search.mbxl
+            .paxl
+              = render partial: 'partials/user_search'
+            %hr.pan.man
+            .actions.paxl
+              %button.btn.btn-default-alt.mln.resend-invite{:disabled => "disabled"} Resend Invite
+              %button.btn.btn-default-alt.mll.reset-password{:disabled => "disabled"} Reset Password
+              %button.btn.btn-default-alt.mll.delete-user{:disabled => "disabled"} Delete User
+            .phxl
+              %table.table.users-list
+                %thead
+                  %tr
+                    %th
+                      %input{:type => "checkbox"}
+                    %th Username
+                    %th Name
+                    %th Verified
+                    %th Last Modified
+                %tbody
+                  %tr
+                    %td
+                      %input{:type => "checkbox"}
+                    %td
+                      %a{:href => "#"}
+                        - if !params[:user_name]
+                          = "user@email.com"
+                        - else
+                          = "#{params[:user_name]}"
+                    %td
+                      / react-text: 64
+                      / /react-text
+                    %td Yes
+                    %td 1/17/2017 10:07:44 AM
+ 
+    
+= render partial: 'partials/invite_modal'

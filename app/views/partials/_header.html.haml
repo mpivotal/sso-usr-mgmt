@@ -1,0 +1,17 @@
+<!-- header -->
+.row.pan.man.type-neutral-11.bg-dark-1.header_background
+  .col-xs-6.pan.man
+    .header
+      %a{:href => "/dashboard/"}
+        .logo{:style => "background-image:url(#{asset_path('pivotal-header-logo@2x.png')});"}
+        %h4.product.header_text.type-neutral-11
+          %span.em-high.mlxl Single Sign-On
+  .col-xs-12.txt-c.pan.man.ptxl
+  .col-xs-6
+    .account.pull-right.dropdown.btn-group
+      %button#account-dropdown.dropdown-toggle.btn.btn-link{"aria-expanded" => "false", "data-toggle" => "dropdown", :style => "margin-top: 12px;", :type => "button"}
+        %span.type-neutral-11.em-default mlong@pivotal.io
+        %span.caret.type-neutral-11
+      %ul.dropdown-menu{"aria-labelledby" => "account-dropdown", :role => "menu"}
+        %li#signout{:role => "presentation"}
+          %a#logout{:href => "/dashboard/logout", :role => "menuitem", :tabindex => "-1"} Sign out
